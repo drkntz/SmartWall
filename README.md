@@ -22,17 +22,17 @@ Install the imager (usually .deb if for Debian-based Linux). Once installed, run
 This program is very straightforward. Choose the SD card and type of OS. Select raspbian for the desktop environment.  
 Use the advanced settings to setup SSH and wifi by using the key combo control + shift + x while in the raspbian installer. This brings up the menu below.
 
-FIGURE 1
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure1.png "Figure 1")
 
-FIGURE 2
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure2.png "Figure 2")
 
 ### Pi Config
 
 #### Disable screen blanking
 Disable screen saver / screen blanking by setting the raspberry pi configuration screen blanking to “disabled.” There’s probably a CLI way to do this. Supposedly you can do this via “xset s off” in cli, but it did not work via SSH.
 courtesey of Pi My Life Up: 
-FIGURE 3
-FIGURE 4
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure3.png "Figure 3")
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure4.png "Figure 4")
 
 #### Rotate Screen
 As the raspberry pi has switched from “legacy” display drivers to x11 display drivers, the old trick of using display_rotate=1,2, or 3 in the configuration text file does not work anymore. Instead, the display has to be rotated using xrandr. For some reason I was having trouble getting the .xprofile or .xinitrc trick to work, so I added an xrandr config to my startup.sh. However, there needs to be a delay in order for this to work. 15 seconds works OK. 
@@ -78,12 +78,12 @@ Settings for the program are stored in config/config.js. Open that file in a tex
 There needs to be a google calendar for this project in Ical format. Supposedly this is a URL to a “secret” address.
 Meaning, the calendar is not “public” but the address can really be accessed by anyone if given the URL. Go to calendar.google.com, to your settings, and click on your calendar in the bottom left as in the image below.
 
-FIGURE 5
-FIGURE 6
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure5.png "Figure 5")
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure6.png "Figure 6")
 
 Scroll down to the “Secret Address” section in the bottom of the page and click the eye icon to the right to view the address. Copy this address in the MM2 config file in the “modules” section under “calendar” 
 
-FIGURE 7 
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure7.png "Figure 7")
 
 This sets up a pretty basic calendar with a scrolling “agenda” style of window. For a full screen full calendar setup, I can use the MMM-MonthlyCalendar module. https://github.com/kolbyjack/MMM-MonthlyCalendar 
 
@@ -113,7 +113,7 @@ modules: [
 #### Configuring MMM-MonthlyCalendar
 The following properties can be configured:
 
-TABLE 1 FIGURE 
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/table1.png "Table 1") 
 
 NOTE: the built in calendar module MUST be enabled with the google ical URL otherwise the MMM-cal module will not work. You can leave the position line blank for the default calendar this way the default calendar is not displayed.
 
@@ -146,7 +146,7 @@ There is a built in weather forecaster that may be useful for this application. 
 ```
 Find an API key by creating a free account with openweathermap and clicking the “subscribe” button for an API key via email. 
 
-FIGURE 8
+![Alt text](https://github.com/drkntz/SmartWall/blob/master/photos/figure8.png "Figure 8")
 
 ### Using MM2 and Chromium in side-by side Mode
 Ultimately, I decided to remove the MM-calendar and instead run a window with chromium below a window with MM2. This way we could have a full color google calendar in addition to the features that MM2 allows. The settings are as follows:

@@ -59,7 +59,7 @@ let config = {
                                 type: "current",
                                 location: "Newmanstown",
                                 locationID: "5203311", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-                                apiKey: "2983a0c2e600aea5e9dfbc038288ee4f"  // This is my API key for openweathermap for current weather
+                                apiKey: "SECRET"  // This is my API key for openweathermap for current weather
                         }
                 },
                 {
@@ -73,7 +73,7 @@ let config = {
 				maxNumberOfDays: "6",
 				colored: "true",
                                 location: "Newmanstown",
-                                apiKey: "2983a0c2e600aea5e9dfbc038288ee4f" // Same api key as above 
+                                apiKey: "SECRET" // Same api key as above 
                         }
                 },
 
